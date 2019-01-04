@@ -1,1 +1,1 @@
-# retail-products-viewer
+# Retail Products Viewer
