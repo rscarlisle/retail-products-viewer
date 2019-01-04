@@ -1,0 +1,70 @@
+<div class='card'>
+  <div class='card-header' style="background:rgba(197, 190, 190, 0.999)">
+    {{pageTitle}}
+  </div>
+  <div class='card-body' >
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-4'>
+        <input type='text'
+               [(ngModel)]='listFilter' />
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='products'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'
+                      (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
+              </button>
+            </th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Links</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let product of products'>
+            <td>
+              <a [routerLink]="['/products', product.id]">
+                <img
+                   [src]='product.hero.href'
+                   [title]='product.name'
+                   [style.width.px]='imageWidth'
+                   [style.margin.px]='imageMargin'>
+            </a>
+            </td>
+            <td>
+              <a [routerLink]="['/products', product.id]">
+                {{ product.id }}
+              </a>
+            </td>
+            <td>{{ product.name }}</td>
+            <td>
+              {{ product.links }}
+            </td>
+            <td 
+              style="min-width:140px">{{ product.priceRange.selling.low }} - {{ product.priceRange.selling.high }}
+            </td>
+            <td>
+              <pm-star [rating]='product.starRating'
+                       (ratingClicked)='onRatingClicked($event)'>
+              </pm-star>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
