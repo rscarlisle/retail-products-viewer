@@ -33,7 +33,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor='let product of products'>
+          <tr *ngFor='let product of filteredProducts'>
             <td>
               <a [routerLink]="['/products', product.id]">
                 <img
@@ -50,7 +50,7 @@
             </td>
             <td>{{ product.name }}</td>
             <td>
-              {{ product.links }}
+              {{ product.links.www }}
             </td>
             <td 
               style="min-width:140px">{{ product.priceRange.selling.low }} - {{ product.priceRange.selling.high }}

@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   errorMessage: string;
   filteredProducts: IProduct[];
   products: IProduct[] = [];
-  _listFilter: string;
+  _listFilter: string = 'cart';
 
   constructor(private productService: ProductService) {}
 
