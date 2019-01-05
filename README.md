@@ -1,6 +1,6 @@
 # Retail Product Viewer
 
-## Setup Intructions
+## Setup Instructions
 
 ## Here is the link to the code challenge project:
 
@@ -12,7 +12,7 @@ git clone https://github.com/rscarlisle/retail-products-viewer.git
 
 ## cd into the newly created directory: retail-products-viewer
 
-1) It can be cloned and installed locally.
+1) The repo can be cloned and installed locally.
 
 2) After cloning the repo locally, run: npm install --> from the terminal command line.
 
