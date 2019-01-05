@@ -2,15 +2,15 @@
 
 ## Setup Intructions
 
-# Here is the link to the code challenge project:
+## Here is the link to the code challenge project:
 
 https://github.com/rscarlisle/retail-products-viewer
 
-# syntax for cloning repo from the terminal command line: 
+## syntax for cloning repo from the terminal command line: 
 
 git clone https://github.com/rscarlisle/retail-products-viewer.git
 
-# cd into the newly created directory: retail-products-viewer
+## cd into the newly created directory: retail-products-viewer
 
 1) It can be cloned and installed locally.
 
